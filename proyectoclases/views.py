@@ -59,12 +59,8 @@ def crear_persona(request):
     persona3.save()
     
     template = loader.get_template('crear_persona.html')
-    template_renderizado = template.render({'persona': persona1})
-    template = loader.get_template('crear_persona.html')
-    template_renderizado = template.render({'persona': persona2})
-    template = loader.get_template('crear_persona.html')
-    template_renderizado = template.render({'persona': persona3})
-    
+    template_renderizado = template.render({'persona': Persona})
+
     return HttpResponse(template_renderizado)
 
 def ver_persona(request):
